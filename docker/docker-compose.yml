@@ -13,7 +13,9 @@ services:
     volumes:
       #- "./chromadb:/chromadb"
       - "./cache:/root/.cache"
-      - "../api_key.txt:/sillytavern-extras/api_key.txt:rw"
+      - type: bind
+        source: /mnt/user/appdata/sillytavern-extras/api_key.txt
+        target: /sillytavern-extras/api_key.txt
     ports:
       - "5100:5100"
     environment:
