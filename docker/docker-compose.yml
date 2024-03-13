@@ -20,5 +20,5 @@ services:
       - "5100:5100"
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-    command: python server.py --enable-modules=caption,summarize,classify
+    command: python server.py --listen --enable-modules=caption,summarize,classify
 #    command: python server.py --enable-modules=caption,summarize,classify,sd,silero-tts,edge-tts,chromadb
